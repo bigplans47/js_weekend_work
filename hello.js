@@ -36,7 +36,6 @@ dog.humanYears = function() {
 };
 console.log(dog.howl());
 console.log(dog.humanYears())
-console.log('dog over')
 
 var rabbit = {
   name: 'Harry',
@@ -51,3 +50,22 @@ console.log(rabbit);
 rabbit.age = 2;
 rabbit.ageHuman = rabbit.humanYearsFunction();
 console.log(rabbit);
+console.log('The rabbit is '+rabbit.age+' years old with with human age of '+rabbit.ageHuman+ ' years');
+
+function Lizard(name, colors, age) {
+  this.name = name;
+  this.colors = colors;
+  this.age = age;
+  this.humanAge = null;
+}
+
+Lizard.prototype.humanAgeCalc = function() {
+  return this.age *10;
+}
+
+var myLizard1 = new Lizard('mic', ['red', 'white'], 5);
+console.log(myLizard1);
+console.log(myLizard1.name);
+
+var myLizard2 = new Lizard('lizzy', 'red', 2);
+console.log(myLizard2);
